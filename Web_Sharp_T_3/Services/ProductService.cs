@@ -23,6 +23,12 @@ namespace Web_Sharp_T_3.Services
         }
         public int AddProduct(ProductCreateRequest product)
         {
+            var categ = _storeContext.Categories.Find(product.CategoryId);
+            if (categ == null)
+            {
+                categ = new Category { Id = (int) product.CategoryId, Name = product.Description, Description = "Auto-created" };
+                _storeContext.Categories.Add(categ);
+            }
             var mapEntity = _mapper.Map<Product>(product);
             _storeContext.Products.Add(mapEntity);
             _storeContext.SaveChanges();

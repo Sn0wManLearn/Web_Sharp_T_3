@@ -45,7 +45,7 @@ namespace Web_Sharp_T_3.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex);
             }
 
         }

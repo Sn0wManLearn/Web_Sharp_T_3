@@ -10,7 +10,7 @@ using Web_Sharp_T_3.Contexts;
 namespace Web_Sharp_T_3.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20250517075614_InitialCreate")]
+    [Migration("20250520130545_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
